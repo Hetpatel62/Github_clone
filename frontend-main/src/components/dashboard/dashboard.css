@@ -1,0 +1,140 @@
+/* Dashboard layout */
+#dashboard {
+  max-width: 1200px;
+  margin: 36px auto;
+  display: flex;
+  gap: 24px;
+  color: #e6e6e6;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+/* Left / Right sidebars */
+aside {
+  width: 260px;
+  background: linear-gradient(180deg, #141414, #0f0f0f);
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #222;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.45);
+}
+
+main {
+  flex: 1 1 auto;
+  min-height: 60vh;
+  background: #0f0f0f;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #222;
+}
+
+/* Headings */
+aside h3, main h2 {
+  margin: 0 0 12px 0;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Search */
+#search {
+  margin-bottom: 16px;
+}
+
+#search input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #0b0b0b;
+  color: #fff;
+  font-size: 14px;
+}
+
+/* Repository card */
+.repo-card {
+  background: linear-gradient(180deg,#0d0d0d,#070707);
+  border: 1px solid #222;
+  padding: 14px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.repo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+}
+
+.repo-card h4 {
+  margin: 0 0 6px 0;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.repo-card .desc {
+  margin: 0;
+  color: #bdbdbd;
+  font-size: 13px;
+}
+
+/* Suggested repository list */
+.suggested-list .suggested-item {
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  background: linear-gradient(180deg,#141414,#0d0d0d);
+  border: 1px solid #222;
+}
+
+/* Star button */
+.star-btn {
+  margin-top: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: linear-gradient(180deg,#1b1b1b,#121212);
+  color: #e6e6e6;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.star-btn:hover:not(:disabled) {
+  border-color: #ffd54a;
+  box-shadow: 0 6px 18px rgba(255,213,74,0.08);
+}
+
+.star-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.star-btn.starred {
+  background: linear-gradient(180deg,#ffd54a,#ffb300);
+  color: #111;
+  border-color: #ff9f1a;
+}
+
+/* Upcoming events */
+.upcoming-events ul {
+  padding-left: 16px;
+  margin: 0;
+}
+
+.upcoming-events li p {
+  margin: 6px 0;
+  color: #d0d0d0;
+  font-size: 13px;
+}
+
+@media (max-width: 900px) {
+  #dashboard {
+    flex-direction: column;
+    max-width: 95%;
+  }
+  aside {
+    width: 100%;
+  }
+  main {
+    order: 2;
+  }
+}
